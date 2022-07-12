@@ -1,0 +1,15 @@
+li{
+    list-style: none;
+    
+}
+
+.list{
+    max-width: 500px;
+  margin: 20px auto;
+  overflow: auto;
+  min-height: 200px;
+  border: 5px solid rgb(10, 75, 127);
+  padding: 40px;
+  border-radius: 5px;
+  background-color: azure;
+}

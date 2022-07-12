@@ -1,0 +1,12 @@
+.lis{
+    margin: 3px;
+    background: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.lis h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
