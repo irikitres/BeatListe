@@ -9,12 +9,16 @@ import { Liste } from 'src/app/Liste';
 })
 export class ListComponent implements OnInit {
 
-  instrumental: Liste[] = [];
+  inst: Liste[] = [];
 
   constructor(private listService : ListService) { }
 
   ngOnInit(): void {
-    this.listService.getList().subscribe((instrumental) => this.instrumental = instrumental);
+    this.listService.getList().subscribe((liste) => this.inst = liste);
+  }
+
+  deleteListe(liste: Liste) {
+    this.listService.deleteListe(liste).subscribe(() =>(this.inst = this.inst.filter(l => l.numero !== liste.numero)));
   }
 
 }

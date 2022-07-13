@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { INSTRUMENTAL } from 'src/app/mock-list';
+//import { INST } from 'src/app/mock-list';
 import { Liste } from 'src/app/Liste';
 import { Observable,of } from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
 
 @Injectable({
@@ -9,12 +10,19 @@ import { Observable,of } from 'rxjs';
 })
 export class ListService {
 
-  constructor() { }
+
+ private apiUrl = 'http://localhost:3000/liste'
+
+  constructor(private http:HttpClient) { }
 
   getList(): Observable <Liste[]> {
-    const instrumental = of (INSTRUMENTAL);
+    
 
-    return instrumental;
+    return this.http.get<Liste[]>(this.apiUrl);
   }
-
+ 
+   deleteListe(liste: Liste): Observable<Liste> {
+     const url =`${this.apiUrl}/${liste.numero}`;
+     return this.http.delete<Liste>(url);
+   }
 }

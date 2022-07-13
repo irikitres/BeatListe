@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "liste": [
+    {
+      "numero": 1,
+      "text": "God is Good",
+      "Type": "HipHop",
+      "Date": "May 5th 2022"
+    },
+    {
+      "numero": 2,
+      "text": "faithful",
+      "Type": "Soul",
+      "Date": "June 10th 2022"
+    },
+    {
+      "numero": 3,
+      "text": "Jesus",
+      "Type": "RnB",
+      "Date": "Juillet 10,2022"
+    }
+  ]
+}

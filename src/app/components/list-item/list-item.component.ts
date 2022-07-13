@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Liste } from 'src/app/Liste';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,6 +11,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class ListItemComponent implements OnInit {
 
  @Input () liste: Liste;
+ @Output () onDeleteliste: EventEmitter<Liste> = new EventEmitter()
+
+
  faTimes = faTimes; 
 
   constructor() { 
@@ -19,5 +22,8 @@ export class ListItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ 
+  onDelete(liste){
+    this.onDeleteliste.emit(liste);
+  }
 }

@@ -1,6 +1,6 @@
 import {Liste} from './Liste'
 
-export const INSTRUMENTAL : Liste[] =[
+export const INST : Liste[] =[
 
     {
         numero: 1,
