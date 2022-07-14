@@ -22,7 +22,8 @@ export class ListService {
   }
  
    deleteListe(liste: Liste): Observable<Liste> {
-     const url =`${this.apiUrl}/${liste.numero}`;
+     const url =`${this.apiUrl}/${liste.id}`;
+     
      return this.http.delete<Liste>(url);
    }
 }

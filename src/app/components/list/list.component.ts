@@ -18,7 +18,10 @@ export class ListComponent implements OnInit {
   }
 
   deleteListe(liste: Liste) {
-    this.listService.deleteListe(liste).subscribe(() =>(this.inst = this.inst.filter(l => l.numero !== liste.numero)));
+    this.listService
+    .deleteListe(liste)
+    .subscribe(() =>(this.inst = this.inst.filter((l) => l.id !== liste.id)));
   }
 
 }
+

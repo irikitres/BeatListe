@@ -1,6 +1,6 @@
 export interface Liste {
-    numero ?:number;
+    id?: number;
     text: string;
     Type: string;
-    Date: string;
+    Date: Date;
 }

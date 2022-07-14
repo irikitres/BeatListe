@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()">
+   
+    <div class="form-control">
+        <label for="text"> New Beat Name</label>
+       <input class="input" type="text" [(ngModel)]="text" name="text" id="text" placeholder="Add"/>
+       </div>
+
+       <div class="form-control">
+        <label for="text"> Type</label>
+       <input class="input" type="text" [(ngModel)]="genre" name="genre" placeholder="Genre"/>
+       </div>
+   
+       <div class="form-control">
+        <label for="text"> Recording Date</label>
+       <input class="input" type="date" [(ngModel)]="Date" name="Date"/>
+       </div>
+       
+       <div class="form-control">
+        <label for="text"> Beat Number</label>
+       <input class="input" type="number" [(ngModel)]="number" name="number"/>
+       </div>
+
+       
+
+       <input [ngStyle]="{'background-color':'green'}" type="submit" value="Save" class="btn btn-block">
+
+</form>
+
